@@ -1,0 +1,7 @@
+# Escludi file FASTQ non compressi
+*.fastq
+*.fq
+
+# Escludi file FASTQ compressi
+*.fastq.gz
+*.fq.gz
