@@ -5,3 +5,13 @@
 # Escludi file FASTQ compressi
 *.fastq.gz
 *.fq.gz
+
+# Ignora tutti i file .txt
+*.txt
+
+# Se vuoi ignorare anche file temporanei
+*.log
+*.tmp
+
+# Se vuoi ignorare solo quelli in una cartella specifica
+# /data/*.txt

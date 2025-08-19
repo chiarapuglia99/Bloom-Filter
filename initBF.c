@@ -16,28 +16,35 @@ void dim(int p, int q)
 
 unsigned long long **allocate()
 {
-	int i,j,k;
-	unsigned long long**a=(unsigned long long**)malloc(x*sizeof(unsigned long long*));
-	if(a==NULL)
-	{
-		printf("Unable to allocate!\n");
-		return NULL;
-	}
-	
-	for(i=0;i<x;i++)
-	{
-		a[i]=(unsigned long long*)malloc(y*sizeof(unsigned long int));
-		if(a[i]==NULL)
-		{
-			printf("Unable to allocate!\n");
-			return NULL;
-		}
-	}
-	for(i=0;i<x;i++)
-		for(j=0;j<y;j++)
-			a[i][j]=0;
-	printf("\nAllocated and Initilized 2DBF Successfully...\n");
-	return a;
+    int i, j;
+    printf("Allocating matrix of size %d x %d\n", x, y);
+
+    unsigned long long **a = (unsigned long long**)malloc(x * sizeof(unsigned long long*));
+    if (a == NULL) {
+        perror("malloc failed for rows");
+        return NULL;
+    }
+
+    for (i = 0; i < x; i++) {
+        a[i] = (unsigned long long*)malloc(y * sizeof(unsigned long long));
+        if (a[i] == NULL) {
+            perror("malloc failed for columns");
+            return NULL;
+        }
+        if (i % 100 == 0)   // stampa ogni 100 righe allocate
+            printf("Row %d allocated\n", i);
+    }
+
+    printf("Initialization...\n");
+    for (i = 0; i < x; i++) {
+        for (j = 0; j < y; j++)
+            a[i][j] = 0;
+        if (i % 100 == 0)   // stampa ogni 100 righe inizializzate
+            printf("Row %d initialized\n", i);
+    }
+
+    printf("Allocated and Initialized 2DBF Successfully...\n");
+    return a;
 }
 
 //Insertion function of KmerCo with only K-mer as input
