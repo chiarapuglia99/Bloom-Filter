@@ -15,3 +15,7 @@
 
 # Se vuoi ignorare solo quelli in una cartella specifica
 # /data/*.txt
+
+# Compilati
+*.exe
+*.o
