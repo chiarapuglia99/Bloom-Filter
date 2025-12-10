@@ -1,8 +1,6 @@
 # KmerCO: Tecnica del conteggio dei kmer basata su Bloom Filter
 
-# Bloom-Filter: Analisi di Kmer con la tecnica KmerCO
-
-Questo progetto nasce dall’esigenza di gestire e analizzare grandi quantità di dati genomici, sfruttando la potenza e l’efficienza dei Bloom Filter e della tecnica KmerCO. Negli anni sono state proposte diverse tecniche, ma KmerCo rappresenta una delle tecniche più all'avanguardia data dalla quantità di confronti che effettua, nonostante rallentino l'esecuzione dell'algoritmo aumentando il costo computazionale. L’obiettivo è fornire uno strumento quanto più accurato possibile per il conteggio e la classificazione dei k-mer, elementi fondamentali nell’analisi bioinformatica di sequenze di DNA. Verranno proposte due versioni a tal proposito, ovvero la versione Canonica e la versione non Canonica che differiscono tra loro non solo per il costo computazionale impiegato, ma anche per il modo con cui vengono considerate le sequenze genomiche e i loro rispettivi reverse complement. 
+Il progetto nasce dall’esigenza di gestire e analizzare grandi quantità di dati genomici, sfruttando la potenza e l’efficienza dei Bloom Filter e della tecnica KmerCO. Negli anni sono state proposte diverse tecniche, ma KmerCo rappresenta una delle tecniche più all'avanguardia data dalla quantità di confronti che effettua, nonostante rallentino l'esecuzione dell'algoritmo aumentando il costo computazionale. L’obiettivo è fornire uno strumento quanto più accurato possibile per il conteggio e la classificazione dei k-mer, elementi fondamentali nell’analisi bioinformatica di sequenze di DNA. Verranno proposte due versioni a tal proposito, ovvero la versione Canonica e la versione non Canonica che differiscono tra loro non solo per il costo computazionale impiegato, ma anche per il modo con cui vengono considerate le sequenze genomiche e i loro rispettivi reverse complement. 
 
 ## Contesto
 
@@ -22,10 +20,10 @@ I test principali sono stati effettuati sul file `balaenoptera.fastq`, scelto pe
 - **Dataset**: File FASTQ e CSV per test e validazione.
 - **Risultati**: Output testuali e grafici per l’analisi delle prestazioni e dell’accuratezza.
 
-## Come usare
+## Compilazione ed esecuzione del file Balaenoptera.fastq
 
 1. **Compilazione**  
-   Utilizza il `makefile` implementaro sulla base dei file esistenti e utilizzato per compilare il progetto. Di seguito, vengono riportati i dettagli della compilazione:
+   Utilizza il `makefile` implementato sulla base dei file esistenti e utilizzato per compilare il progetto. Di seguito, vengono riportati i dettagli della compilazione:
    ```
    make clean
    make
